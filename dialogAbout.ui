@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogSobre</class>
+ <widget class="QDialog" name="DialogSobre">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>13</x>
+     <y>10</y>
+     <width>471</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="plainText">
+    <string>Real Time Deformation:
+
+Authors: 
+Michel Melo da Silva 
+Roberto Alves Braga Jr
+
+Date: 
+07/02/2014
+
+Version: 
+1.0
+
+Last atualization:
+20/02/2014
+
+Institution: 
+Federal University of Lavras
+
+Departament: 
+Engineering Department
+
+Setor:
+Centre for Development of Applied Instrumentation in Agriculture
+
+Local: 
+Lavras - MG - Brazil
+
+Related Papers:
+--
+--
+
+Contacts: 
+michelms@comp.ufla.br
+robbraga@gmail.com</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

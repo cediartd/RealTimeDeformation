@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogAjuda</class>
+ <widget class="QDialog" name="DialogAjuda">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>381</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="plainText">
+    <string>Real Time Deformation is software to analyze images, from a computer camera device, based in a reference image.
+
+The main window has four principals groups: camera control, set reference image, filter parameters control and save results.
+
+The groups are:
+
+# Camera Image 
+
+In this group, the user can choose the computer camera device operating on his computer, set the camera resolution, control the FPS camera and start/stop the camera.
+
+# Reference Image 
+
+It is responsible to set/reset the reference image. The initial reference image is a totally black image. When the button “Reset Reference” is pressed, a black image becomes reference image again.
+
+# Filter Image 
+
+This group contains all configurable parameters utilized on the filters applied at the filtered image.
+
+# Results
+
+After the reference image has been set, results are able to be saved. It can be done by this group.
+
+For more information about this software and his usage, read the user guide.</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

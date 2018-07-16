@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=RealTimeDeformation
+Version=1.0
+Exec=RealTimeDeformation
+Comment=RealTimeDeformation
+Icon=/usr/share/RealTimeDeformation/icons/RealTimeDeformation.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Education;
+
+Name[pt_BR]=RealTimeDeformation.desktop

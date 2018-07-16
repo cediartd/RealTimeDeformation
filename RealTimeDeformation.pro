@@ -14,11 +14,18 @@ equals(QT_MAJOR_VERSION,5) {
 
 QT       += core gui
 
+VERSION  = 1.0.1
 TARGET = RealTimeDeformation
 TEMPLATE = app
 
-RC_FILE = mainwindow.rc
+DESTDIR=bin
+CONFIG += release
 
+
+
+################################################################################
+## OPENCV
+################################################################################
 win32{
     OPENCV_WIN_DLL_PATH="C:\opencv\build\x86\vc14\bin"
     OPENCV_WIN_INCLUDE_PATH=C:\opencv\build\include
@@ -75,16 +82,99 @@ unix{
     message("The current 'make install' path is $$PREFIX")
 }
 
-SOURCES += main.cpp\
-    dialogAbout.cpp \
-    dialogHelp.cpp \
-    mainWindow.cpp
+################################################################################
+## CODE SCRIPT
+################################################################################
 
-HEADERS  += mainwindow.h\
-    dialogHelp.h \
-    dialogAbout.h
+SOURCES += src/main.cpp\
+    src/dialogAbout.cpp \
+    src/dialogHelp.cpp \
+    src/mainWindow.cpp
+
+INCLUDEPATH += headers
+
+HEADERS  += headers/mainwindow.h\
+    headers/dialogHelp.h \
+    headers/dialogAbout.h
 
 FORMS    +=\
-    dialogAbout.ui \
-    dialogHelp.ui \
-    mainWindow.ui
+    ui/dialogAbout.ui \
+    ui/dialogHelp.ui \
+    ui/mainWindow.ui
+
+RC_FILE = mainwindow.rc
+
+RESOURCES += \
+    RealTimeDeformation.qrc
+
+################################################################################
+## INSTALL SCRIPT
+################################################################################
+
+## MYAPP
+myapp.path   = $$PREFIX/bin
+unix{
+    myapp.files += bin/$${TARGET}
+}
+win32{
+    myapp.files += bin/$${TARGET}.exe
+}
+
+# DOCS
+documentation.path   = $$PREFIX/share/doc/$${TARGET}
+documentation.files += \
+    share/doc/$${TARGET}/$${TARGET}.rtf
+
+# ICONS
+iconos.path = $$PREFIX/share/$${TARGET}/icons
+iconos.files += \
+    share/$${TARGET}/icons/$${TARGET}.png
+
+# DESKTOP
+desktop.path = $$PREFIX/share/applications
+desktop.files += share/applications/$${TARGET}.desktop
+
+# Install: MYAPP DOCS ICONS DESKTOP
+INSTALLS    += myapp\
+    documentation \
+    iconos \
+    desktop
+
+################################################################################
+## DISTRIBUTION RELEASE SCRIPT
+################################################################################
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+DEFINES += APP_TARGET=\\\"$$TARGET\\\"
+
+unix{
+QMAKE_CLEAN += -r bin
+}
+
+APPARCHITECTURE = $${QMAKE_HOST.arch}
+equals(APPARCHITECTURE , "x86_64") {
+    APPARCHITECTURE = "amd64"
+}
+equals(APPARCHITECTURE , "x86") {
+    APPARCHITECTURE = "i386"
+}
+equals(APPARCHITECTURE , "i686") {
+    APPARCHITECTURE = "i386"
+}
+
+
+message("")
+message(" Program filename: $$TARGET")
+message(" Program version:  $$VERSION")
+message(" Host architecture $${QMAKE_HOST.arch}: $$APPARCHITECTURE")
+message("")
+
+APPSUMMARY="Real Time Deformation"
+APPDESCRIPTION="Real Time Deformation"
+
+
+DISTFILES += \
+    share/applications/* \
+    share/doc/RealTimeDeformation/* \
+    share/RealTimeDeformation/icons/* \
+    clean_all.sh  \
+    README.md

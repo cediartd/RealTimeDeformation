@@ -7,7 +7,6 @@ DialogSobre::DialogSobre(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowTitle("About this program");
-    setWindowIcon(QIcon("icons/about.png"));
 }
 
 DialogSobre::~DialogSobre()

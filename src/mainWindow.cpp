@@ -20,8 +20,6 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     ui->comboBox_SelectCameraResolution->setItemText(0, comboBoxText);
 
     // Interface initialization.
-    ui->actionHelp->setIcon(QIcon("icons/help.png"));
-    ui->actionAbout->setIcon(QIcon("icons/about.png"));
     ui->pushButton_stopProcess->setVisible(false);
     ui->pushButton_resetReference->setVisible(false);
     ui->statusBar->showMessage("Loading...", 5000);

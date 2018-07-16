@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/myimages">
+        <file>share/RealTimeDeformation/icons/RealTimeDeformation.png</file>
+        <file>share/RealTimeDeformation/icons/help.png</file>
+        <file>share/RealTimeDeformation/icons/about.png</file>
+    </qresource>
+</RCC>

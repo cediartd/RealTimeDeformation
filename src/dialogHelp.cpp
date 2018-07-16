@@ -7,7 +7,6 @@ DialogAjuda::DialogAjuda(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowTitle("Help");
-    setWindowIcon(QIcon("icons/help.png"));
 }
 
 DialogAjuda::~DialogAjuda()

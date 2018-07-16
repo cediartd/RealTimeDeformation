@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="../RealTimeDeformation.qrc">
+    <normaloff>:/myimages/share/RealTimeDeformation/icons/about.png</normaloff>:/myimages/share/RealTimeDeformation/icons/about.png</iconset>
+  </property>
   <widget class="QPlainTextEdit" name="plainTextEdit">
    <property name="geometry">
     <rect>
@@ -75,6 +79,8 @@ robbraga@gmail.com</string>
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../RealTimeDeformation.qrc"/>
+ </resources>
  <connections/>
 </ui>

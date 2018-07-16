@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 
-#include "QDesktopWidget.h"
+#include <QDesktopWidget>
 
 #include <QDebug>
 

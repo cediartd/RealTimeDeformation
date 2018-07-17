@@ -1,4 +1,4 @@
-# RealTimeDeformation
+﻿# RealTimeDeformation
 Software aquisição imagem
 
 # GNU/Linux
@@ -11,4 +11,5 @@ Software aquisição imagem
     
 # Windows
 
-Usa QT creator e Opencv 2.4
+Usar QT creator e Opencv 2.4
+O Opencv deve ser instalado do disco local C

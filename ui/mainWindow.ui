@@ -18,7 +18,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>190</width>
+    <width>210</width>
     <height>560</height>
    </size>
   </property>
@@ -296,8 +296,8 @@
      <rect>
       <x>10</x>
       <y>410</y>
-      <width>171</width>
-      <height>61</height>
+      <width>181</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="title">
@@ -311,7 +311,7 @@
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>151</width>
+       <width>171</width>
        <height>31</height>
       </rect>
      </property>
@@ -327,7 +327,7 @@
      <x>0</x>
      <y>0</y>
      <width>210</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuHelp">
